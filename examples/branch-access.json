@@ -1,0 +1,6 @@
+{
+  "role": "Operator",
+  "sessionBranchId": 3,
+  "requestedBranchId": 3,
+  "expected": "Allow"
+}

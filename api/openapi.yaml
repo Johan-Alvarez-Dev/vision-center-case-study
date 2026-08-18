@@ -1,0 +1,11 @@
+openapi: 3.1.0
+info:
+  title: Vision Center Public Contract
+  version: 1.0.0
+paths:
+  /api/public/branches/current:
+    get:
+      summary: Devuelve la sede activa de la sesión
+      responses:
+        '200': { description: Sede activa }
+        '401': { description: Sesión requerida }
