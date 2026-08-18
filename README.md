@@ -3,10 +3,15 @@
 ### Multi-branch clinical and commercial workflows built with Next.js, TypeScript, and SQL Server
 
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs)](https://nextjs.org/) [![React 19](https://img.shields.io/badge/React-19-149ECA?logo=react)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript)](https://www.typescriptlang.org/) [![SQL Server](https://img.shields.io/badge/SQL_Server-Azure-CC2927?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server/)
+[![Public sample CI](https://github.com/Johan-Alvarez-Dev/vision-center-case-study/actions/workflows/ci.yml/badge.svg)](https://github.com/Johan-Alvarez-Dev/vision-center-case-study/actions/workflows/ci.yml)
 
 Vision Center connects patients, appointments, clinical records, optical prescriptions, inventory, billing, documents, and user management under a multi-branch authorization model.
 
 > This project demonstrates my TypeScript/Next.js side. It does not claim to be a .NET application. Clinical data, SQL schema, documents, and production source remain private.
+
+[Open the live demo](https://vision-center-app.vercel.app/) · [Review the architecture](./docs/architecture.md) · [Inspect the samples](./sample-code) · [Read the API contract](./api/openapi.yaml)
+
+![Vision Center secure clinic-management sign-in screen](./screenshots/live-demo.png)
 
 ## The problem
 
@@ -67,7 +72,7 @@ Private documentation records historical performance improvements, but this case
 
 ## Demo and boundaries
 
-The clinical instance is private. A future demo must use entirely synthetic patients, records, prescriptions, invoices, and documents.
+[Open the live demo](https://vision-center-app.vercel.app/). Clinical data, documents, SQL schema, credentials, and production source remain private.
 
 ## License
 

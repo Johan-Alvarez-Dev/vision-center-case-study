@@ -1,5 +1,5 @@
-# Screenshot Plan
+# Product captures
 
-Planned synthetic captures: schedule, clinical profile, inventory, invoice, and branch selector.
+`live-demo.png` is a cropped, sanitized capture of the public authentication boundary. It contains no patient, clinical, billing, or branch data.
 
-All patient names, medical data, documents, branch details, URLs, and file metadata must be fictional or removed.
+Future captures must use fictional data and remove patient names, medical records, documents, branch details, URLs, and file metadata.
