@@ -1,68 +1,74 @@
-# Vision Center
+# Vision Center — Optical Clinic Management
 
-### Gestión clínica y comercial multi-sede para centros ópticos
+### Multi-branch clinical and commercial workflows built with Next.js, TypeScript, and SQL Server
 
-[![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs)](https://nextjs.org/) [![React 19](https://img.shields.io/badge/React-19-149ECA?logo=react)](https://react.dev/) [![SQL Server](https://img.shields.io/badge/SQL_Server-Azure-CC2927?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server/) [![Core privado](https://img.shields.io/badge/core-private-111827)](#alcance-público)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs)](https://nextjs.org/) [![React 19](https://img.shields.io/badge/React-19-149ECA?logo=react)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript)](https://www.typescriptlang.org/) [![SQL Server](https://img.shields.io/badge/SQL_Server-Azure-CC2927?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server/)
 
-Vision Center integra pacientes, citas, historias clínicas, fórmulas ópticas, inventario, facturación y usuarios bajo un contexto multi-sede.
+Vision Center connects patients, appointments, clinical records, optical prescriptions, inventory, billing, documents, and user management under a multi-branch authorization model.
 
-> Este repositorio publica arquitectura y una muestra TypeScript segura. La aplicación, sus datos clínicos y el esquema completo permanecen privados.
+> This project demonstrates my TypeScript/Next.js side. It does not claim to be a .NET application. Clinical data, SQL schema, documents, and production source remain private.
 
-## Problema
+## The problem
 
-Una óptica necesita conectar atención clínica e inventario sin filtrar información entre sedes. La aplicación combina flujos operativos y documentos, con autorización granular y optimizaciones para equipos de recursos limitados.
+An optical clinic must connect clinical and commercial workflows without leaking records across branches. The application also needs to remain usable on constrained front-desk hardware.
 
-## Mi responsabilidad
+## My role
 
-Desarrollo full-stack con Next.js/React/TypeScript: rutas de API, SQL Server, autenticación y roles, módulos clínicos/comerciales, almacenamiento Azure y optimización de interfaz.
+I implemented the full-stack Next.js application: UI flows, API routes, TypeScript services, SQL Server integration, sessions/roles, Azure Blob Storage, multi-branch authorization, and performance-oriented loading/caching.
 
-## Capacidades demostradas
+## Engineering highlights
 
-- Next.js App Router y React 19.
-- API Routes con validación y servicios tipados.
-- SQL Server/Azure SQL, procedimientos almacenados y migraciones versionadas.
-- Autenticación con sesiones persistidas, bcrypt y roles.
-- Aislamiento multi-sede en pacientes, inventario y facturación.
-- Azure Blob Storage para documentos.
-- Lazy loading, caché TTL/LRU y adaptación a dispositivos limitados.
+- Next.js App Router and React 19.
+- Typed API routes and service boundaries.
+- Azure SQL / SQL Server stored procedures and versioned migrations.
+- Persisted sessions, bcrypt password hashing, and role checks.
+- Branch isolation across patients, inventory, and billing.
+- Azure Blob Storage for documents.
+- Lazy loading, bounded TTL/LRU caching, and device-aware UI behavior.
+- Logical deletion and audit-friendly data handling.
 
-## Arquitectura
+## Architecture
 
 ```mermaid
 flowchart LR
-  UI["Next.js · React"] --> Routes["API Routes"]
-  Routes --> Services["Servicios de dominio"]
+  UI["Next.js · React"] --> Routes["API routes"]
+  Routes --> Services["Typed services"]
   Services --> SQL["Azure SQL"]
   Services --> Blob["Azure Blob Storage"]
-  Session["Sesión · roles · sede"] --> Routes
+  Session["Session · role · branch"] --> Routes
 ```
 
-Consulta [arquitectura](./docs/architecture.md), [decisiones](./docs/decisions.md) y [roadmap](./docs/roadmap.md).
+Read [architecture](./docs/architecture.md), [decisions](./docs/decisions.md), and [engineering evidence](./docs/engineering-evidence.md).
 
-## Muestra pública
+## Public code samples
 
-`BranchScope` implementa un guard reutilizable que resuelve acceso por sede sin confiar en un `sedeId` enviado libremente por el cliente. Usa TypeScript y el runner de pruebas integrado de Node.
+| Sample | Demonstrates |
+| --- | --- |
+| `branch-scope.ts` | Fail-closed branch authorization |
+| `ttl-lru-cache.ts` | Bounded caching with deterministic expiry |
+| `patient-query.ts` | Normalized pagination/filter contracts |
+| Node tests | Branch isolation, cache eviction, invalid input |
 
 ```bash
 npm test
 ```
 
-Revisa [código](./sample-code/branch-scope.ts), [pruebas](./tests/branch-scope.test.ts) y [OpenAPI](./api/openapi.yaml).
+## Evidence standard
 
-## Demo
+Private documentation records historical performance improvements, but this case study does not publish percentages until hardware, sample size, and reproduction steps are available. It demonstrates the underlying techniques instead.
 
-No se publica la instancia clínica. Una demo futura deberá usar pacientes, historias, facturas y documentos enteramente sintéticos.
+## Challenges addressed
 
-## Resultados y evidencia
+1. Deriving branch scope from trusted session state rather than request input.
+2. Keeping clinical records and billing isolated by branch.
+3. Managing SQL migrations without editing applied history.
+4. Reducing initial work on constrained devices.
+5. Separating route transport from reusable service logic.
 
-La documentación privada registra optimizaciones de bundle, carga y llamadas al servidor; este showcase no repite porcentajes hasta publicar metodología y mediciones reproducibles. Sí muestra decisiones verificables: lazy loading, caché acotada, migraciones SQL y separación por servicios.
+## Demo and boundaries
 
-## Alcance público
+The clinical instance is private. A future demo must use entirely synthetic patients, records, prescriptions, invoices, and documents.
 
-| Público | Privado |
-| --- | --- |
-| Arquitectura y decisiones | Historias clínicas y datos personales |
-| Guard multi-sede y tests | Esquema SQL/procedures completos |
-| OpenAPI reducido | Credenciales, documentos y telemetría |
+## License
 
-Seguridad: [SECURITY.md](./SECURITY.md).
+MIT applies only to the public samples.

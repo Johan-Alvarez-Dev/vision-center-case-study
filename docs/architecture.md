@@ -1,15 +1,15 @@
-# Arquitectura pública
+# Public Architecture
 
-Vision Center usa Next.js como interfaz y frontera HTTP. Las rutas delegan en servicios; SQL Server conserva reglas y operaciones de datos; Azure Blob Storage aloja documentos.
+Vision Center uses Next.js as the UI and HTTP boundary. API routes delegate to typed services; SQL Server owns durable data operations; Azure Blob Storage owns binary documents.
 
-## Contexto de seguridad
+## Security context
 
-La sesión resuelve usuario, rol y sede activa. Los servicios reciben un contexto autorizado; no deben aceptar `sedeId` del body como única prueba de acceso. Administradores pueden cambiar contexto mediante un flujo explícito.
+The session resolves user, role, and active branch. Services receive authorized context and never trust a body/query `branchId` as the only access proof. Administrators switch branch through an explicit audited flow.
 
-## Módulos
+## Modules
 
-Pacientes, citas, historias clínicas, fórmulas, inventario, facturación, configuración y usuarios comparten contratos TypeScript y convenciones de error.
+Patients, appointments, clinical records, prescriptions, inventory, billing, configuration, and users share TypeScript contracts and error conventions.
 
-## Rendimiento
+## Performance
 
-Módulos pesados se cargan bajo demanda. La caché tiene TTL y capacidad acotada. Los estados de carga y skeletons se diseñan como parte del flujo, especialmente para hardware limitado.
+Heavy modules load on demand. Cache entries have both TTL and bounded capacity. Loading/error/empty states are part of the feature contract, especially on constrained devices.

@@ -1,7 +1,7 @@
-# Roadmap público
+# Public Roadmap
 
-- Convertir scripts críticos en pruebas automatizadas repetibles.
-- Publicar benchmarks con metodología y hardware documentados.
-- Ampliar auditoría y autorización multi-sede.
-- Endurecer contratos de servicios y validación.
-- Preparar una demo completamente sintética.
+- Convert critical integration scripts into repeatable automated tests.
+- Publish benchmarks with documented hardware and methodology.
+- Expand authorization and audit coverage.
+- Harden service contracts and validation.
+- Prepare a completely synthetic demonstration environment.

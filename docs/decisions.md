@@ -1,21 +1,21 @@
-# Decisiones técnicas públicas
+# Technical Decisions
 
-## Sede desde sesión
+## Branch from trusted session
 
-La autorización resuelve sede desde contexto confiable, no solo desde parámetros del cliente.
+Authorization derives scope from server-side session context, not freely supplied request parameters.
 
-## SQL Server con migraciones versionadas
+## Versioned SQL migrations
 
-Cada cambio estructural tiene orden, checksum y verificación; los scripts históricos no se editan.
+Structural changes have order and verification. Applied migration files are never rewritten.
 
-## Eliminación lógica
+## Logical deletion
 
-Registros clínicos/operativos se inactivan cuando la trazabilidad importa.
+Clinical and operational records are deactivated when traceability matters.
 
-## Servicios entre rutas y SQL
+## Services between routes and SQL
 
-Las rutas HTTP no concentran reglas ni queries; delegan en módulos testeables.
+HTTP routes remain thin and delegate validation/business behavior to reusable services.
 
-## Métricas con metodología
+## Reproducible performance claims
 
-No se publican porcentajes de rendimiento sin entorno, muestra y reproducción.
+Percentages are not published without documented hardware, dataset, and measurement method.

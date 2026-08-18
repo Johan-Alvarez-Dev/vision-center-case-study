@@ -1,3 +1,5 @@
-# Plan de capturas
+# Screenshot Plan
 
-Usar pacientes, documentos y sedes ficticios. Capturas sugeridas: agenda, ficha clínica, inventario, factura y selector de sede. Eliminar metadatos e identificadores.
+Planned synthetic captures: schedule, clinical profile, inventory, invoice, and branch selector.
+
+All patient names, medical data, documents, branch details, URLs, and file metadata must be fictional or removed.
