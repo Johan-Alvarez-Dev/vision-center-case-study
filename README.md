@@ -9,9 +9,12 @@ Vision Center connects patients, appointments, clinical records, optical prescri
 
 > This project demonstrates my TypeScript/Next.js side. It does not claim to be a .NET application. Clinical data, SQL schema, documents, and production source remain private.
 
-[Open the live demo](https://vision-center-app.vercel.app/) · [Review the architecture](./docs/architecture.md) · [Inspect the samples](./sample-code) · [Read the API contract](./api/openapi.yaml)
+[Open the live demo](https://vision-center-app.vercel.app/) · [Product tour](./docs/product-tour.md) · [Architecture](./docs/architecture.md) · [Code samples](./sample-code) · [Video](#video-walkthrough)
 
-![Vision Center secure clinic-management sign-in screen](./screenshots/live-demo.png)
+<picture>
+  <source media="(max-width: 900px)" srcset="./screenshots/vision-center-appointments-light-900.webp">
+  <img src="./screenshots/vision-center-appointments-light-1600.webp" alt="Vision Center appointment calendar with an empty synthetic day" width="1600">
+</picture>
 
 ## The problem
 
@@ -73,6 +76,14 @@ Private documentation records historical performance improvements, but this case
 ## Demo and boundaries
 
 [Open the live demo](https://vision-center-app.vercel.app/). Clinical data, documents, SQL schema, credentials, and production source remain private.
+
+The [product tour](./docs/product-tour.md) intentionally includes only screens without patient-identifying or billing data.
+
+## Video walkthrough
+
+> **Coming soon.** A privacy-safe tour of appointments, branch-scoped workflows, inventory, and billing architecture is being recorded with synthetic data.
+
+The repository reserves the [media area](./media/README.md) for the final video or optimized GIF.
 
 ## License
 
