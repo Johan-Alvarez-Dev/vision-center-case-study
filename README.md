@@ -81,9 +81,15 @@ The [product tour](./docs/product-tour.md) intentionally includes only screens w
 
 ## Video walkthrough
 
-> **Coming soon.** A privacy-safe tour of appointments, branch-scoped workflows, inventory, and billing architecture is being recorded with synthetic data.
+The 4-second preview demonstrates the administrative shell and data-dense clinical workflows. Record-level content is deliberately redacted because privacy is part of the engineering boundary, not a presentation afterthought.
 
-The repository reserves the [media area](./media/README.md) for the final video or optimized GIF.
+<p align="center">
+  <a href="./media/vision-center-walkthrough.gif">
+    <img src="./media/vision-center-walkthrough.gif" alt="Vision Center clinical administration walkthrough with record-level data redacted" width="640">
+  </a>
+</p>
+
+Open the privacy-safe animation at full size or review the [annotated product tour](./docs/product-tour.md).
 
 ## License
 

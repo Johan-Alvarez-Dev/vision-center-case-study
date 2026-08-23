@@ -2,6 +2,16 @@
 
 This public gallery is intentionally limited to views without patient-identifying or billing data. Open the [live demo](https://vision-center-app.vercel.app/) to explore the current interface with an authorized demo account.
 
+## Privacy-safe walkthrough
+
+The silent preview demonstrates the administrative shell and data-dense workflows while deliberately redacting all record-level content.
+
+<p align="center">
+  <a href="../media/vision-center-walkthrough.gif">
+    <img src="../media/vision-center-walkthrough.gif" alt="Vision Center clinical administration walkthrough with record-level data redacted" width="640">
+  </a>
+</p>
+
 ## Appointment workflow
 
 The schedule combines calendar navigation, daily appointments, search, and completion summaries while keeping branch context at the server boundary.

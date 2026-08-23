@@ -1,11 +1,11 @@
-# Vision Center video walkthrough
+# Vision Center walkthrough assets
 
-This directory is reserved for the public product walkthrough currently in production.
+## Published
 
-Recommended deliverables:
+- [`vision-center-walkthrough.gif`](./vision-center-walkthrough.gif) — optimized silent preview used by the main README and product tour.
 
-- `vision-center-walkthrough.mp4` — 60–120 second narrated product tour.
-- `vision-center-walkthrough.gif` — short silent preview optimized for the main README.
-- `vision-center-walkthrough-cover.webp` — accessible poster image linked to the full video.
+The public preview deliberately redacts every record-level surface. Patient names, document numbers, phone numbers, clinical data, invoices, branch details, credentials, and private URLs are not published.
 
-Use synthetic records only. Remove patient names, document numbers, phone numbers, clinical data, invoices, branch details, credentials, and private URLs before publishing.
+## Optional next asset
+
+A future `vision-center-walkthrough.mp4` can provide a 60–120 second narrated tour recorded entirely with synthetic data. Keep the GIF as the fast recruiter preview and link the longer video rather than embedding it directly.
