@@ -9,7 +9,7 @@ Vision Center connects patients, appointments, clinical records, optical prescri
 
 > This project demonstrates my TypeScript/Next.js side. It does not claim to be a .NET application. Clinical data, SQL schema, documents, and production source remain private.
 
-[Open the live demo](https://vision-center-app.vercel.app/) · [Product tour](./docs/product-tour.md) · [Architecture](./docs/architecture.md) · [Code samples](./sample-code) · [Video](#video-walkthrough)
+[Open the live demo](https://vision-center-demo-guide.vercel.app/demo) · [Product tour](./docs/product-tour.md) · [Architecture](./docs/architecture.md) · [Code samples](./sample-code) · [Video](#video-walkthrough)
 
 <picture>
   <source media="(max-width: 900px)" srcset="./screenshots/vision-center-appointments-light-900.webp">
@@ -75,7 +75,7 @@ Private documentation records historical performance improvements, but this case
 
 ## Demo and boundaries
 
-[Open the live demo](https://vision-center-app.vercel.app/). Clinical data, documents, SQL schema, credentials, and production source remain private.
+[Open the live demo](https://vision-center-demo-guide.vercel.app/demo). Clinical data, documents, SQL schema, credentials, and production source remain private.
 
 The [product tour](./docs/product-tour.md) intentionally includes only screens without patient-identifying or billing data.
 

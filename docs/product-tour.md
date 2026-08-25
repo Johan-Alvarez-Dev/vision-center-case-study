@@ -1,6 +1,6 @@
 # Vision Center product tour
 
-This public gallery is intentionally limited to views without patient-identifying or billing data. Open the [live demo](https://vision-center-app.vercel.app/) to explore the current interface with an authorized demo account.
+This public gallery is intentionally limited to views without patient-identifying or billing data. Open the [live demo](https://vision-center-demo-guide.vercel.app/demo) to explore the guided, privacy-safe experience.
 
 ## Privacy-safe walkthrough
 
